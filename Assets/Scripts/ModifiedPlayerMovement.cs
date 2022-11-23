@@ -15,6 +15,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+    //public Collider collider;
 
     public float groundDrag;
     public Transform isGroundedObject;
@@ -32,6 +33,15 @@ public class ModifiedPlayerMovement : MonoBehaviour
 
     //Animations
     public Animator animator;
+
+    //Game Manager
+    public GameObject gameManager;
+
+    //Boxes
+    public bool boxPicked = false;
+    
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +86,53 @@ public class ModifiedPlayerMovement : MonoBehaviour
         HandleAnimations();
     }
 
+    private void InteractObjects()
+    {
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.tag == "box" && !boxPicked)
+        {
+            Debug.Log("Box Collided");
+            if (Input.GetKey(KeyCode.E))
+            {
+                boxPicked = true;
+                Debug.Log("Picked up box");
+                Destroy(collision.gameObject); //destroy the box
+            }
+            
+
+            
+        }
+        else if (collision.gameObject.tag == "box" && boxPicked)
+        {
+            
+            if (Input.GetKey(KeyCode.E))
+            {
+                
+                //Debug.Log("Already have a box picked up");
+                gameManager.GetComponent<GameManager>().UpdateHelpMsgText("You already have a box picked up.. Go drop it off at the truck!");
+
+            }
+        }
+        else if (collision.gameObject.tag == "truck" && boxPicked)
+        {
+            ;
+            if (Input.GetKey(KeyCode.E))
+            {
+                boxPicked = false;
+                Debug.Log("Dropped box");
+                gameManager.GetComponent<GameManager>().incrementBoxes();
+            }
+            
+
+
+        }
+    }
+
     private void MovePlayer()
     {
         //calc movement direction
@@ -93,7 +150,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
     private void HandleAnimations()
     {
 
-        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey))
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
             //Run straight
             animator.SetBool("run", false);
@@ -101,13 +158,13 @@ public class ModifiedPlayerMovement : MonoBehaviour
             animator.SetBool("walk", false);
 
         }
-        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey))
+        else if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey))
         {
             animator.SetBool("run", true);
             animator.SetBool("jump", false);
             animator.SetBool("walk", false);
         }
-        else if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey))
+        else if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey))
         {
             animator.SetBool("run", false);
             animator.SetBool("jump", false);
