@@ -6,6 +6,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed;
+    public float runSpeed;
     public Transform orientation;
 
     float horizontalInput;
@@ -16,6 +17,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     public float groundDrag;
+    public Transform isGroundedObject;
 
     public float jumpForce;
     public float jumpCooldown;
@@ -28,6 +30,9 @@ public class ModifiedPlayerMovement : MonoBehaviour
 
     public KeyCode jumpKey = KeyCode.Space;
 
+    //Animations
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,17 +44,13 @@ public class ModifiedPlayerMovement : MonoBehaviour
     void Update()
     {
         //Ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
-
+        grounded = Physics.Raycast(isGroundedObject.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
 
-        if(Input.GetKey(jumpKey)){
-            Debug.Log(readyToJump);
-            Debug.Log(grounded);
-            
-        }
+        
 
         //jumping
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
@@ -72,6 +73,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        HandleAnimations();
     }
 
     private void MovePlayer()
@@ -79,10 +81,45 @@ public class ModifiedPlayerMovement : MonoBehaviour
         //calc movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        if(grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f,ForceMode.Force);
+        if(grounded && animator.GetBool("run"))
+            rb.AddForce(moveDirection.normalized * runSpeed * 10f,ForceMode.Force);
+        else if (grounded && animator.GetBool("walk"))
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         else if(!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+
+    }
+
+    private void HandleAnimations()
+    {
+
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey))
+        {
+            //Run straight
+            animator.SetBool("run", false);
+            animator.SetBool("jump", false);
+            animator.SetBool("walk", false);
+
+        }
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey))
+        {
+            animator.SetBool("run", true);
+            animator.SetBool("jump", false);
+            animator.SetBool("walk", false);
+        }
+        else if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(jumpKey))
+        {
+            animator.SetBool("run", false);
+            animator.SetBool("jump", false);
+            animator.SetBool("walk", true);
+        }
+        else if (Input.GetKey(jumpKey))
+        {
+            animator.SetBool("run", false);
+            animator.SetBool("jump", true);
+            animator.SetBool("walk", false);
+        }
+
 
     }
 
@@ -90,9 +127,14 @@ public class ModifiedPlayerMovement : MonoBehaviour
     {
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        if(flatVel.magnitude > moveSpeed)
+        if(flatVel.magnitude > moveSpeed && animator.GetBool("walk"))
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+        else if(flatVel.magnitude > moveSpeed && animator.GetBool("run"))
+        {
+            Vector3 limitedVel = flatVel.normalized * runSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
     }
@@ -108,5 +150,6 @@ public class ModifiedPlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+        animator.SetBool("jump", false);
     }
 }
