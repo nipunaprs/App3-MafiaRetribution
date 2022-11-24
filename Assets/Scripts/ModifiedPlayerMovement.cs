@@ -5,6 +5,8 @@ using UnityEngine;
 public class ModifiedPlayerMovement : MonoBehaviour
 {
 
+    
+
     public float moveSpeed;
     public float runSpeed;
     public Transform orientation;
@@ -40,7 +42,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
     //Boxes
     public bool boxPicked = false;
     
-
+    //GunControl
 
 
     // Start is called before the first frame update
@@ -70,6 +72,8 @@ public class ModifiedPlayerMovement : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
 
+        
+
 
         SpeedControl();
 
@@ -93,7 +97,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        //MISSION 1 STUFF
         if (collision.gameObject.tag == "box" && !boxPicked)
         {
             Debug.Log("Box Collided");

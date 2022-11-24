@@ -6,6 +6,7 @@ TagManager:
   tags:
   - box
   - truck
+  - endroad
   layers:
   - Default
   - TransparentFX
