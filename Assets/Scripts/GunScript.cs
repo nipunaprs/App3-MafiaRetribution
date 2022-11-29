@@ -74,7 +74,7 @@ public class GunScript : MonoBehaviour
 
         //Raycasts #shootingModeCam.transform.position, shootingModeCam.transform.forward, combatLookAt.forward 
         // ADD THE FILTER LAYER OF WHATISENEMY AFTER RANGE, AFTER TESTING
-        if (Physics.Raycast(shootingModeCam.transform.position, shootingModeCam.transform.forward, out rayHit, range))
+        if (Physics.Raycast(shootingModeCam.transform.position, shootingModeCam.transform.forward, out rayHit, range, whatIsEnemy))
         {
 
         
