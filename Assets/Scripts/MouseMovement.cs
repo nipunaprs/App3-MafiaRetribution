@@ -67,7 +67,7 @@ public class MouseMovement : MonoBehaviour
 
 
 
-    private void SwitchCamStyle(CameraStyle newStyle)
+    public void SwitchCamStyle(CameraStyle newStyle)
     {
         combatCam.SetActive(false);
         thirdPersonCam.SetActive(false);

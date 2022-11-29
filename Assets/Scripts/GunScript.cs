@@ -21,6 +21,8 @@ public class GunScript : MonoBehaviour
     //Graphics
     public GameObject muzzleFlash, bulletHole, cube;
 
+    
+
     //Reference
     public Camera shootingModeCam;
     public Transform attackPoint;
@@ -69,14 +71,21 @@ public class GunScript : MonoBehaviour
         bulletsLeft--;
 
         //Raycasts #shootingModeCam.transform.position, shootingModeCam.transform.forward,
-        if (Physics.Raycast(attackPoint.transform.position, attackPoint.transform.forward, out rayHit, range, whatIsEnemy))
+        if (Physics.Raycast(shootingModeCam.transform.position, shootingModeCam.transform.forward, out rayHit, range))
         {
+
+        
+        
             Debug.Log(rayHit.collider.name);
+            
 
-            if (rayHit.collider.CompareTag("Enemy"))
+           if (rayHit.collider.CompareTag("Enemy"))
+            {
                 rayHit.collider.GetComponent<Enemy>().TakeDamage(damage);
-
+            }
         }
+
+
 
         //Graphics
         Instantiate(cube, rayHit.point, Quaternion.Euler(0, 180, 0));
