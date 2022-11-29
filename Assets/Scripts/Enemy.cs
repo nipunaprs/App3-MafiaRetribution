@@ -9,10 +9,14 @@ public class Enemy : MonoBehaviour
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
+    //Animations
+    public Animator animator;
+
     //Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
+    public float timeBetweenWalks;
 
     //Attacking
     public float timeBetweenAttacks;
@@ -53,7 +57,36 @@ public class Enemy : MonoBehaviour
 
     private void Patroling()
     {
+        animator.SetBool("run", false);
+        animator.SetBool("aggressive", false);
+
         if (!walkPointSet) SearchWalkPoint();
+
+        if (walkPointSet)
+        {
+            //Play walking animation
+            agent.SetDestination(walkPoint);
+            animator.SetBool("walk", true);
+        }
+
+        Vector3 distanceToWalkPoint = transform.position - walkPoint;
+        
+
+        //If reached desired walk point, walk point set is false
+        if (distanceToWalkPoint.magnitude < 1f)
+        {
+            Invoke(nameof(ResetWalkPoint), timeBetweenWalks);
+            animator.SetBool("walk", false);
+            animator.SetBool("aggressive", false);
+            animator.SetBool("run", false);
+            Debug.Log("Walk point reset to false -- bc reached");
+            //Play idle animation
+        }
+    }
+
+    private void ResetWalkPoint()
+    {
+        walkPointSet = false;
     }
 
     private void SearchWalkPoint()
@@ -67,27 +100,15 @@ public class Enemy : MonoBehaviour
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
 
-        if(walkPointSet)
-        {
-            //Play walking animation
-            agent.SetDestination(walkPoint);
-        }
-
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
-
-        //If reached desired walk point, walk point set is false
-        if (distanceToWalkPoint.magnitude < 1f)
-        {
-            walkPointSet = false;
-            //Play idle animation
-        }
-            
-
     }
 
 
     private void ChasePlayer()
     {
+        animator.SetBool("walk", false);
+        animator.SetBool("aggressive", false);
+
+        animator.SetBool("run", true);
         agent.SetDestination(player.position);
     }
 
@@ -97,12 +118,16 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(transform.position);
         transform.LookAt(player);
 
+        animator.SetBool("run", false);
+        animator.SetBool("walk", false);
+        animator.SetBool("aggressive", true);
+
         if(!alreadyAttacked)
         {
             //ATTACK CODE
 
 
-
+            animator.SetBool("aggressive", false);
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }

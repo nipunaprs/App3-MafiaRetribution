@@ -10,15 +10,20 @@ public class GunControl : MonoBehaviour
     public GameObject gunObj;
     public GameObject gameManager;
 
+    
+
     private void Start()
     {
+        
         gameManager.GetComponent<GameManagerMission2>().UpdateHelpMsgText("Press G toggle you're gun!");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //jumping
+        
+
+        //Get gun out
         if (Input.GetKeyDown(KeyCode.G))
         {
             if (gunOut)
@@ -38,4 +43,7 @@ public class GunControl : MonoBehaviour
             }
         }
     }
+
+   
+
 }
