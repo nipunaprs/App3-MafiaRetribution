@@ -25,6 +25,8 @@ public class GunScript : MonoBehaviour
 
     //Reference
     public Camera shootingModeCam;
+    public Transform combatLookAt;
+    public Transform crossHair;
     public Transform attackPoint;
     public RaycastHit rayHit;
     public LayerMask whatIsEnemy;
@@ -70,7 +72,8 @@ public class GunScript : MonoBehaviour
         readyToShoot = false;
         bulletsLeft--;
 
-        //Raycasts #shootingModeCam.transform.position, shootingModeCam.transform.forward,
+        //Raycasts #shootingModeCam.transform.position, shootingModeCam.transform.forward, combatLookAt.forward 
+        // ADD THE FILTER LAYER OF WHATISENEMY AFTER RANGE, AFTER TESTING
         if (Physics.Raycast(shootingModeCam.transform.position, shootingModeCam.transform.forward, out rayHit, range))
         {
 
@@ -88,9 +91,9 @@ public class GunScript : MonoBehaviour
 
 
         //Graphics
-        Instantiate(cube, rayHit.point, Quaternion.Euler(0, 180, 0));
+        Instantiate(bulletHole, rayHit.point, Quaternion.Euler(0, 180, 0));
         //Instantiate(muzzleFlash, attackPoint.position, Quaternion.Euler(0, 180, 0));
-        //blah
+        
         bulletsShot--;
         BulletsText.text = bulletsLeft + "/" + magazineSize;
 
