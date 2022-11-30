@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public GameManagerMission2 gameManager;
+
+
     //Animations
     public Animator animator;
 
@@ -26,6 +29,8 @@ public class Enemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    //Dead
+    bool dead;
 
     //Health
     public float health;
@@ -39,19 +44,24 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        dead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //Check in sight and attack range
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        if (!dead)
+        {
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+            if (!playerInSightRange && !playerInAttackRange) Patroling();
+            if (playerInSightRange && !playerInAttackRange) ChasePlayer();
+            if (playerInSightRange && playerInAttackRange) AttackPlayer();
+        }
+        
 
     }
 
@@ -148,10 +158,19 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            dead = true;
+            //Increase money
+            gameManager.KilledEnemy();
+
             //Play death animation
+            animator.SetBool("run", false);
+            animator.SetBool("walk", false);
+            animator.SetBool("aggressive", false);
+            animator.SetTrigger("death");
+            
 
             //Invoke destroy in a bit
-            Invoke(nameof(DestroyEnemy), 2f); // Tweak timing to match animation
+            Invoke(nameof(DestroyEnemy), 4f); // Tweak timing to match animation
         }
     }
 
