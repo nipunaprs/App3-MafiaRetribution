@@ -107,6 +107,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("ur dead m8");
+            //Load game restart screen
         }
     }
 
