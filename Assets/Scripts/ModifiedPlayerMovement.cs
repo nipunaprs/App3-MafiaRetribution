@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ModifiedPlayerMovement : MonoBehaviour
 {
 
-    
+    public int health;
+    public Text healthText;
 
     public float moveSpeed;
     public float runSpeed;
@@ -50,6 +52,8 @@ public class ModifiedPlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        health = 100;
+
     }
 
     // Update is called once per frame
@@ -93,6 +97,17 @@ public class ModifiedPlayerMovement : MonoBehaviour
     private void InteractObjects()
     {
         
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        healthText.text = health.ToString();
+        Debug.Log(health);
+        if (health <= 0)
+        {
+            Debug.Log("ur dead m8");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

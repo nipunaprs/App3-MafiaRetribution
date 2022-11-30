@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour
             animator.SetBool("walk", false);
             animator.SetBool("aggressive", false);
             animator.SetBool("run", false);
-            Debug.Log("Walk point reset to false -- bc reached");
+            //Debug.Log("Walk point reset to false -- bc reached");
             //Play idle animation
         }
     }
@@ -121,11 +121,12 @@ public class Enemy : MonoBehaviour
         animator.SetBool("run", false);
         animator.SetBool("walk", false);
         animator.SetBool("aggressive", true);
+        if(!GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = true;
 
-        if(!alreadyAttacked)
+        if (!alreadyAttacked)
         {
             //ATTACK CODE
-
+            
 
             animator.SetBool("aggressive", false);
             alreadyAttacked = true;
@@ -136,6 +137,7 @@ public class Enemy : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+        if (GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = false;
     }
 
     public void TakeDamage(int damage)

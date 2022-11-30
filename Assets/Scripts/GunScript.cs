@@ -79,7 +79,7 @@ public class GunScript : MonoBehaviour
 
         
         
-            Debug.Log(rayHit.collider.name);
+            //Debug.Log(rayHit.collider.name);
             
 
            if (rayHit.collider.CompareTag("Enemy"))
