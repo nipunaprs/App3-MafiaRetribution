@@ -22,10 +22,7 @@ public class GameManagerMission2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(moneyCollected == 100)
-        {
-            Debug.Log("mission finished -- change scene");
-        }
+    
     }
 
 
@@ -33,7 +30,12 @@ public class GameManagerMission2 : MonoBehaviour
     {
         enemiesKilled++;
         moneyCollected += 20;
-        moneyCollectText.text = "Money Recovered: $" + moneyCollected + "k/$100k";
+        moneyCollectText.text = "Money Recovered: $" + moneyCollected + "k/$120k";
+
+        if (moneyCollected == 120)
+        {
+            Debug.Log("mission finished -- change scene");
+        }
     }
 
     public void UpdateHelpMsgText(string input)

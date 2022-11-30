@@ -69,6 +69,7 @@ public class Enemy : MonoBehaviour
     {
         animator.SetBool("run", false);
         animator.SetBool("aggressive", false);
+        if (GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = false;
 
         if (!walkPointSet) SearchWalkPoint();
 
@@ -115,6 +116,7 @@ public class Enemy : MonoBehaviour
 
     private void ChasePlayer()
     {
+        if (GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = false;
         animator.SetBool("walk", false);
         animator.SetBool("aggressive", false);
 
@@ -147,7 +149,7 @@ public class Enemy : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
-        if (GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = false;
+        //if (GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = false;
     }
 
     public void TakeDamage(int damage)
