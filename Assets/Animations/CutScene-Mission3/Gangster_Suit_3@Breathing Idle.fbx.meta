@@ -1,0 +1,842 @@
+fileFormatVersion: 2
+guid: d507ff54581814a49936aed215e386d3
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -203655887218126122
+    second: Breathing Idle
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Breathing Idle
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 298
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: gmob_pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_l_thigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_r_thigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_l_calf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_r_calf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_l_foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_r_foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_l_clavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_r_clavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_l_upperarm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_r_upperarm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_l_forearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_r_forearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_l_hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_r_hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_l_toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_r_toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: bros
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: jaw
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl1_00
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl1_01
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl1_02
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl0_00
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl0_01
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl0_02
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl2_00
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl2_01
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl2_02
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl3_00
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl3_01
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl3_02
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl4_00
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl4_01
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fl4_02
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr1_00
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr1_01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr1_02
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr0_00
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr0_01
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr0_02
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr2_00
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr2_01
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr2_02
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr3_00
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr3_01
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr3_02
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr4_00
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr4_01
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: gmob_fr4_02
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Gangster_Suit_3@Breathing Idle(Clone)
+      parentName: 
+      position: {x: 0.022957709, y: -0.0248571, z: 0.027023084}
+      rotation: {x: -0.013262747, y: 0.0009820807, z: 0.010874464, w: 0.9998525}
+      scale: {x: 1, y: 1, z: 1}
+    - name: gmob_root
+      parentName: Gangster_Suit_3@Breathing Idle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: gmob_pelvis
+      parentName: gmob_root
+      position: {x: 0.0011254754, y: 1.0376567, z: 0.0041358788}
+      rotation: {x: 0.50000066, y: -0.50000083, z: -0.49999928, w: 0.49999937}
+      scale: {x: 1, y: 0.9999998, z: 0.9999998}
+    - name: gmob_spine
+      parentName: gmob_pelvis
+      position: {x: -0.102139205, y: -0.00018383026, z: 0.00000014190151}
+      rotation: {x: -0.000002115965, y: -0, z: 0.000000074505806, w: 1}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999997}
+    - name: gmob_spine1
+      parentName: gmob_spine
+      position: {x: -0.23091309, y: -0.00025670498, z: -7.1173417e-10}
+      rotation: {x: 0.000000029802322, y: -0.000000029802322, z: 0.018103331, w: 0.99983615}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: gmob_l_clavicle
+      parentName: gmob_spine1
+      position: {x: -0.28507462, y: -0.0015912104, z: 0.046954654}
+      rotation: {x: -0.5885944, y: -0.00023551517, z: 0.80842847, w: -0.00032113367}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.9999999}
+    - name: gmob_l_upperarm
+      parentName: gmob_l_clavicle
+      position: {x: -0.181935, y: -0.000000028610229, z: 0.00000061035155}
+      rotation: {x: 0.042677257, y: 0.15185241, z: -0.0066700247, w: 0.9874588}
+      scale: {x: 1, y: 1, z: 1.0000007}
+    - name: gmob_l_forearm
+      parentName: gmob_l_upperarm
+      position: {x: -0.29802465, y: -0.000000014305114, z: -0.00000015258789}
+      rotation: {x: -0.00074160454, y: 0.0082261395, z: 0.038135737, w: 0.9992385}
+      scale: {x: 0.99999964, y: 0.9999997, z: 0.9999998}
+    - name: gmob_l_hand
+      parentName: gmob_l_forearm
+      position: {x: -0.29347283, y: 0.000000009536743, z: 0.00000022888183}
+      rotation: {x: 0.6813068, y: 0.062474363, z: 0.009195222, w: -0.72926915}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000005}
+    - name: gmob_fl2_00
+      parentName: gmob_l_hand
+      position: {x: -0.110829316, y: -0.0018746948, z: -0.008588047}
+      rotation: {x: -0.9968417, y: 0.07325368, z: -0.023488954, w: -0.019716976}
+      scale: {x: 1.0000007, y: 0.9999998, z: 0.9999998}
+    - name: gmob_fl2_01
+      parentName: gmob_fl2_00
+      position: {x: -0.04364486, y: -0.000000076293944, z: 0.000000038146972}
+      rotation: {x: -0.0000011529766, y: 0.00000030046772, z: 0.039396986, w: 0.9992237}
+      scale: {x: 1.0000005, y: 1.0000007, z: 1.0000002}
+    - name: gmob_fl2_02
+      parentName: gmob_fl2_01
+      position: {x: -0.03879036, y: 0.000000076293944, z: -0.000000057220458}
+      rotation: {x: -0.0000051427633, y: -0.00000032037497, z: 0.043355957, w: 0.99905974}
+      scale: {x: 1, y: 0.9999996, z: 0.99999994}
+    - name: gmob_fl1_00
+      parentName: gmob_l_hand
+      position: {x: -0.106915966, y: 0.00019439697, z: -0.03407111}
+      rotation: {x: -0.933604, y: -0.014848368, z: -0.35794437, w: -0.0062391455}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: gmob_fl1_01
+      parentName: gmob_fl1_00
+      position: {x: -0.037209928, y: 0, z: -0.000000019073486}
+      rotation: {x: 0.00000031338993, y: 0.0000018174098, z: 0.038696274, w: 0.99925107}
+      scale: {x: 1.000001, y: 1.0000007, z: 0.99999994}
+    - name: gmob_fl1_02
+      parentName: gmob_fl1_01
+      position: {x: -0.033792954, y: 0.000000076293944, z: -0.000000114440915}
+      rotation: {x: -0.0000015329567, y: 0.000000029802319, z: 0.024426593, w: 0.9997016}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: gmob_fl3_00
+      parentName: gmob_l_hand
+      position: {x: -0.10502029, y: -0.00058776856, z: 0.016451644}
+      rotation: {x: -0.9973856, y: 0.067497864, z: -0.0060215304, w: -0.025096027}
+      scale: {x: 1.0000004, y: 0.9999998, z: 1.0000005}
+    - name: gmob_fl3_01
+      parentName: gmob_fl3_00
+      position: {x: -0.043503717, y: -0.000000038146972, z: 0.000000009536743}
+      rotation: {x: -0.0000003371386, y: -0.0000002126907, z: 0.039126907, w: 0.99923426}
+      scale: {x: 1.0000011, y: 1.0000012, z: 1.0000001}
+    - name: gmob_fl3_02
+      parentName: gmob_fl3_01
+      position: {x: -0.035509873, y: 0.000000114440915, z: -0.000000019073486}
+      rotation: {x: -0.0000034235418, y: -0.00000020116568, z: 0.04736959, w: 0.99887747}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000001}
+    - name: gmob_fl4_00
+      parentName: gmob_l_hand
+      position: {x: -0.09976562, y: 0.004970474, z: 0.03844433}
+      rotation: {x: -0.9915687, y: 0.03126973, z: 0.03296376, w: -0.12135502}
+      scale: {x: 1.0000005, y: 0.9999996, z: 1.0000001}
+    - name: gmob_fl4_01
+      parentName: gmob_fl4_00
+      position: {x: -0.033626784, y: -0.00000015258789, z: 0}
+      rotation: {x: 0.00000016391273, y: 0.0000006754415, z: 0.038822442, w: 0.9992462}
+      scale: {x: 1.0000005, y: 1.0000008, z: 1.0000001}
+    - name: gmob_fl4_02
+      parentName: gmob_fl4_01
+      position: {x: -0.029658813, y: -0.000000038146972, z: 0}
+      rotation: {x: -0.000003993511, y: -0.00000022305176, z: 0.06388197, w: 0.99795747}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: gmob_fl0_00
+      parentName: gmob_l_hand
+      position: {x: -0.023707733, y: 0.007659378, z: -0.020232659}
+      rotation: {x: -0.8227804, y: -0.043632302, z: -0.092985354, w: 0.5590013}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
+    - name: gmob_fl0_01
+      parentName: gmob_fl0_00
+      position: {x: -0.05067379, y: -0.00000030517577, z: 0}
+      rotation: {x: 0.000000089406946, y: 0.000002002343, z: 0.032368444, w: 0.999476}
+      scale: {x: 1, y: 1, z: 0.9999996}
+    - name: gmob_fl0_02
+      parentName: gmob_fl0_01
+      position: {x: -0.04321838, y: 0.00000022888183, z: -0.000000057220458}
+      rotation: {x: -0.0000015723008, y: -0.000000047333888, z: 0.07694061, w: 0.9970357}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: gmob_neck
+      parentName: gmob_spine1
+      position: {x: -0.34635392, y: -0.0044651553, z: 0.000000001717417}
+      rotation: {x: 0.000000011432003, y: 0.00000023492059, z: -0.08819329, w: 0.9961034}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000004}
+    - name: gmob_head
+      parentName: gmob_neck
+      position: {x: -0.067900084, y: 0.000004234314, z: 1.2951204e-11}
+      rotation: {x: -0.000000063782934, y: 0.00000005867645, z: -0.0016421378, w: 0.9999987}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: jaw
+      parentName: gmob_head
+      position: {x: -0.047409967, y: 0.007939205, z: 7.2759566e-13}
+      rotation: {x: -0.6542121, y: 0.75631106, z: 0.00000021320193, w: 0.00000069582796}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000004}
+    - name: bros
+      parentName: gmob_head
+      position: {x: -0.11246658, y: 0.010988006, z: 5.820766e-13}
+      rotation: {x: -0.8026289, y: 0.5964787, z: 0.00000019966248, w: 0.0000005167033}
+      scale: {x: 1.0000007, y: 1.0000004, z: 1.0000004}
+    - name: gmob_r_clavicle
+      parentName: gmob_spine1
+      position: {x: -0.28507462, y: -0.0015909624, z: -0.046954703}
+      rotation: {x: 0.5885944, y: 0.00023323811, z: 0.80842835, w: -0.00032265516}
+      scale: {x: 1.000001, y: 1.0000005, z: 1.0000008}
+    - name: gmob_r_upperarm
+      parentName: gmob_r_clavicle
+      position: {x: -0.18193513, y: -0.0000000047683715, z: 0.00000030517577}
+      rotation: {x: 0.042703412, y: 0.12927535, z: 0.0071293376, w: -0.9906632}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000008}
+    - name: gmob_r_forearm
+      parentName: gmob_r_upperarm
+      position: {x: -0.29802412, y: 0.0000000047683715, z: -0.00000030517577}
+      rotation: {x: -0.00079918624, y: 0.008866561, z: -0.03801438, w: -0.9992376}
+      scale: {x: 0.9999998, y: 0.99999994, z: 1.0000004}
+    - name: gmob_r_hand
+      parentName: gmob_r_forearm
+      position: {x: -0.29347283, y: -0.000000057220458, z: -0.000000076293944}
+      rotation: {x: 0.6813066, y: 0.062474214, z: -0.009194908, w: 0.7292693}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1}
+    - name: gmob_fr2_00
+      parentName: gmob_r_hand
+      position: {x: -0.110828854, y: -0.0018733215, z: 0.00858696}
+      rotation: {x: 0.9968414, y: -0.07325879, z: -0.023486715, w: -0.019718114}
+      scale: {x: 1.0000004, y: 1, z: 1.0000007}
+    - name: gmob_fr2_01
+      parentName: gmob_fr2_00
+      position: {x: -0.04364486, y: -0.00000019073484, z: -0.000000038146972}
+      rotation: {x: 0.0000008922068, y: -0.00000216742, z: 0.03939346, w: 0.9992238}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000004}
+    - name: gmob_fr2_02
+      parentName: gmob_fr2_01
+      position: {x: -0.038790513, y: 0.00000015258789, z: 0.0000002670288}
+      rotation: {x: 0.000005550682, y: 0.0000004842877, z: 0.04335555, w: 0.9990597}
+      scale: {x: 1.0000005, y: 0.99999994, z: 1}
+    - name: gmob_fr1_00
+      parentName: gmob_r_hand
+      position: {x: -0.10691681, y: 0.00019134521, z: 0.03406928}
+      rotation: {x: 0.9336066, y: 0.014830481, z: -0.35793835, w: -0.006238901}
+      scale: {x: 0.99999994, y: 1.0000005, z: 1.000001}
+    - name: gmob_fr1_01
+      parentName: gmob_fr1_00
+      position: {x: -0.037209548, y: 0, z: -0.000000057220458}
+      rotation: {x: 0.0000000027939668, y: 0.0000017677805, z: 0.038692996, w: 0.9992512}
+      scale: {x: 1.0000008, y: 1.0000004, z: 1.0000004}
+    - name: gmob_fr1_02
+      parentName: gmob_fr1_01
+      position: {x: -0.033792723, y: -0.00000019073484, z: -0.000000076293944}
+      rotation: {x: 0.000001505017, y: 0.00000026822087, z: 0.024427053, w: 0.9997016}
+      scale: {x: 0.99999994, y: 0.9999998, z: 1}
+    - name: gmob_fr3_00
+      parentName: gmob_r_hand
+      position: {x: -0.10502121, y: -0.000592041, z: -0.01645399}
+      rotation: {x: 0.99738514, y: -0.06750387, z: -0.0060178423, w: -0.025096785}
+      scale: {x: 1.0000004, y: 0.9999996, z: 1.0000004}
+    - name: gmob_fr3_01
+      parentName: gmob_fr3_00
+      position: {x: -0.04350357, y: 0, z: -0.000000028610229}
+      rotation: {x: -0.00000012665986, y: -0.0000011418014, z: 0.039125215, w: 0.9992343}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: gmob_fr3_02
+      parentName: gmob_fr3_01
+      position: {x: -0.0355101, y: 0.000000114440915, z: 0.0000001335144}
+      rotation: {x: 0.0000040754676, y: 0.00000022351742, z: 0.04736951, w: 0.9988775}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000006}
+    - name: gmob_fr4_00
+      parentName: gmob_r_hand
+      position: {x: -0.09976562, y: 0.004969406, z: -0.03844578}
+      rotation: {x: 0.9915682, y: -0.03127478, z: 0.032968953, w: -0.12135639}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1.0000006}
+    - name: gmob_fr4_01
+      parentName: gmob_fr4_00
+      position: {x: -0.03362602, y: -0.000000076293944, z: 0.000000085830685}
+      rotation: {x: -0.00000022351729, y: 0.0000020461146, z: 0.038823232, w: 0.99924606}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: gmob_fr4_02
+      parentName: gmob_fr4_01
+      position: {x: -0.029658584, y: 0.000000076293944, z: -0.0000001335144}
+      rotation: {x: 0.0000046663918, y: 0.00000029522926, z: 0.063881755, w: 0.99795747}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000001}
+    - name: gmob_fr0_00
+      parentName: gmob_r_hand
+      position: {x: -0.023705902, y: 0.007664566, z: 0.020232372}
+      rotation: {x: 0.82278025, y: 0.04362454, z: -0.09298129, w: 0.5590027}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
+    - name: gmob_fr0_01
+      parentName: gmob_fr0_00
+      position: {x: -0.05067344, y: 0.00000015258789, z: -0.00000020980835}
+      rotation: {x: -0.0000003576277, y: -0.0000039022398, z: 0.03235861, w: 0.9994764}
+      scale: {x: 0.9999998, y: 1.0000008, z: 0.99999994}
+    - name: gmob_fr0_02
+      parentName: gmob_fr0_01
+      position: {x: -0.043218687, y: -0.00000022888183, z: 0.00000020980835}
+      rotation: {x: 0.0000016976546, y: -0.00000022376119, z: 0.076940686, w: 0.99703574}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000005}
+    - name: gmob_l_thigh
+      parentName: gmob_pelvis
+      position: {x: 0.00000015258789, y: 0.00000018715858, z: 0.10369685}
+      rotation: {x: -0.0034283395, y: 0.99869037, z: 0.0370322, w: 0.035135936}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: gmob_l_calf
+      parentName: gmob_l_thigh
+      position: {x: -0.47734413, y: -0.0000000011920929, z: 0.000000057220458}
+      rotation: {x: 4.1472947e-10, y: 0.000000040978183, z: 0.08420564, w: 0.9964484}
+      scale: {x: 1, y: 1.0000001, z: 1.0000002}
+    - name: gmob_l_foot
+      parentName: gmob_l_calf
+      position: {x: -0.41380575, y: -0.000000009536743, z: -0.000000038146972}
+      rotation: {x: -0.048975844, y: 0.03895322, z: -0.07751729, w: 0.9950252}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: gmob_l_toe0
+      parentName: gmob_l_foot
+      position: {x: -0.10213928, y: 0.16043475, z: -0.000000019073486}
+      rotation: {x: 0.00000018253922, y: -0.00000017695129, z: -0.7071068, w: 0.70710677}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1.0000006}
+    - name: gmob_r_thigh
+      parentName: gmob_pelvis
+      position: {x: -0.00000015258789, y: -0.000000100731846, z: -0.10369687}
+      rotation: {x: -0.00342828, y: 0.9986903, z: -0.037033703, w: -0.0351361}
+      scale: {x: 0.99999994, y: 0.99999976, z: 0.9999999}
+    - name: gmob_r_calf
+      parentName: gmob_r_thigh
+      position: {x: -0.47734374, y: 0.000000007152557, z: 0.000000019073486}
+      rotation: {x: -0.000000035761328, y: 0.000000055879347, z: 0.08420563, w: 0.99644846}
+      scale: {x: 0.99999976, y: 1.0000002, z: 1.0000005}
+    - name: gmob_r_foot
+      parentName: gmob_r_calf
+      position: {x: -0.41380584, y: 0.000000014305114, z: 0.000000076293944}
+      rotation: {x: 0.048975773, y: -0.038953345, z: -0.077517234, w: 0.99502516}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: gmob_r_toe0
+      parentName: gmob_r_foot
+      position: {x: -0.10213924, y: 0.16043475, z: 0.000000019073486}
+      rotation: {x: 0.000000026077029, y: -0.000000050291412, z: -0.7071067, w: 0.7071069}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000006}
+    - name: suit002
+      parentName: Gangster_Suit_3@Breathing Idle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1.079568, y: 1.079568, z: 1.079568}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
