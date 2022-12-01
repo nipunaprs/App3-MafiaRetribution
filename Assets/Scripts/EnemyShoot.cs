@@ -83,7 +83,7 @@ public class EnemyShoot : MonoBehaviour
         bulletsLeft--;
 
         //Raycasts #shootingModeCam.transform.position, shootingModeCam.transform.forward, combatLookAt.forward 
-        if (Physics.Raycast(transform.position, transform.forward, out rayHit, range, whatIsPlayer))
+        if (Physics.Raycast(transform.position, transform.forward, out rayHit, range))
         {
 
 

@@ -60,7 +60,7 @@ public class GameManagerMission4 : MonoBehaviour
     {
         //Debug.Log("Load the scene");
         File.WriteAllText(Application.dataPath + "/Resources/save.txt", "4");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(11);
     }
 
     public void KilledEnemy()
