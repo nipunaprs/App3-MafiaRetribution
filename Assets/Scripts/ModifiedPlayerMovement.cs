@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ModifiedPlayerMovement : MonoBehaviour
 {
@@ -106,8 +107,8 @@ public class ModifiedPlayerMovement : MonoBehaviour
         Debug.Log(health);
         if (health <= 0)
         {
-            Debug.Log("ur dead m8");
-            //Load game restart screen
+            SceneManager.LoadScene(1);
+            
         }
     }
 

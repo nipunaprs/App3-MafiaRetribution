@@ -21,7 +21,7 @@ public class GunScript : MonoBehaviour
     //Graphics
     public GameObject muzzleFlash, bulletHole, cube;
 
-    
+    public AudioSource gunSound;
 
     //Reference
     public Camera shootingModeCam;
@@ -37,7 +37,7 @@ public class GunScript : MonoBehaviour
         readyToShoot = true;
         //Change text as well
         BulletsText.text = bulletsLeft + "/" + magazineSize;
-
+        gunSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -71,7 +71,7 @@ public class GunScript : MonoBehaviour
     {
         readyToShoot = false;
         bulletsLeft--;
-
+        gunSound.Play();
         //Raycasts #shootingModeCam.transform.position, shootingModeCam.transform.forward, combatLookAt.forward 
         // ADD THE FILTER LAYER OF WHATISENEMY AFTER RANGE, AFTER TESTING
         if (Physics.Raycast(shootingModeCam.transform.position, shootingModeCam.transform.forward, out rayHit, range, whatIsEnemy))
