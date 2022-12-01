@@ -16,7 +16,7 @@ public class GameManagerMission2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        UpdateHelpMsgText("Press G toggle you're gun!");
     }
 
     // Update is called once per frame

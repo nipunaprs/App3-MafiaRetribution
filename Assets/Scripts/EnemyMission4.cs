@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+
+public class EnemyMission4 : MonoBehaviour
 {
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
 
-    public GameManagerMission2 gameManager;
+    public GameManagerMission4 gameManager;
 
 
     //Animations
@@ -61,7 +62,7 @@ public class Enemy : MonoBehaviour
             if (playerInSightRange && !playerInAttackRange) ChasePlayer();
             if (playerInSightRange && playerInAttackRange) AttackPlayer();
         }
-        
+
 
     }
 
@@ -69,7 +70,7 @@ public class Enemy : MonoBehaviour
     {
         animator.SetBool("run", false);
         animator.SetBool("aggressive", false);
-        if (GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = false;
+        if (GetComponent<EnemyShootMission4>().attack) GetComponent<EnemyShootMission4>().attack = false;
 
         if (!walkPointSet) SearchWalkPoint();
 
@@ -81,7 +82,7 @@ public class Enemy : MonoBehaviour
         }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
-        
+
 
         //If reached desired walk point, walk point set is false
         if (distanceToWalkPoint.magnitude < 1f)
@@ -116,7 +117,7 @@ public class Enemy : MonoBehaviour
 
     private void ChasePlayer()
     {
-        if (GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = false;
+        if (GetComponent<EnemyShootMission4>().attack) GetComponent<EnemyShootMission4>().attack = false;
         animator.SetBool("walk", false);
         animator.SetBool("aggressive", false);
 
@@ -133,13 +134,12 @@ public class Enemy : MonoBehaviour
         animator.SetBool("run", false);
         animator.SetBool("walk", false);
         animator.SetBool("aggressive", true);
-        if(!GetComponent<EnemyShoot>().attack) GetComponent<EnemyShoot>().attack = true;
-         
+        if (!GetComponent<EnemyShootMission4>().attack) GetComponent<EnemyShootMission4>().attack = true;
 
         if (!alreadyAttacked)
         {
             //ATTACK CODE
-            
+
 
             animator.SetBool("aggressive", false);
             alreadyAttacked = true;
@@ -170,7 +170,7 @@ public class Enemy : MonoBehaviour
             animator.SetBool("walk", false);
             animator.SetBool("aggressive", false);
             animator.SetTrigger("death");
-            
+
 
             //Invoke destroy in a bit
             Invoke(nameof(DestroyEnemy), 4f); // Tweak timing to match animation
@@ -181,5 +181,4 @@ public class Enemy : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }

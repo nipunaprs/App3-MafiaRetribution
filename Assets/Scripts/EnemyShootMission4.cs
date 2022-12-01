@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class GunScript : MonoBehaviour
+public class EnemyShootMission4 : MonoBehaviour
 {
     //Gun control variables
     public int damage;
@@ -14,37 +13,48 @@ public class GunScript : MonoBehaviour
 
     //Bools
     bool shooting, readyToShoot, reloading;
-
-    //Text objects
-    public Text BulletsText;
-
-    //Graphics
-    public GameObject muzzleFlash, bulletHole, cube;
-
-    
+    public GameObject bulletHole;
 
     //Reference
-    public Camera shootingModeCam;
     public Transform combatLookAt;
-    public Transform crossHair;
-    public Transform attackPoint;
     public RaycastHit rayHit;
-    public LayerMask whatIsEnemy;
+    public LayerMask whatIsPlayer;
+
+    //Attack bool
+    public bool attack;
 
     private void Start()
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
+        attack = false;
         //Change text as well
-        BulletsText.text = bulletsLeft + "/" + magazineSize;
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (attack)
+        {
+            shooting = true;
+
+            if (bulletsLeft < magazineSize && !reloading)
+                Reload();
+
+            if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+            {
+                bulletsShot = bulletsPerTap;
+                Shoot();
+
+            }
+
+
+        }
+
         //Shooting inputs
-        myInput();
+        // myInput();
     }
 
     private void myInput()
@@ -73,26 +83,18 @@ public class GunScript : MonoBehaviour
         bulletsLeft--;
 
         //Raycasts #shootingModeCam.transform.position, shootingModeCam.transform.forward, combatLookAt.forward 
-        // ADD THE FILTER LAYER OF WHATISENEMY AFTER RANGE, AFTER TESTING
-        if (Physics.Raycast(shootingModeCam.transform.position, shootingModeCam.transform.forward, out rayHit, range, whatIsEnemy))
+        if (Physics.Raycast(transform.position, transform.forward, out rayHit, range))
         {
 
-        
-        
-            //Debug.Log(rayHit.collider.name);
-            
 
-           if (rayHit.collider.CompareTag("Enemy"))
+
+            //Debug.Log(rayHit.collider.name);
+
+
+            if (rayHit.collider.CompareTag("Player"))
             {
-                if(rayHit.collider.GetComponent<Enemy>())
-                {
-                    rayHit.collider.GetComponent<Enemy>().TakeDamage(damage);
-                }
-                else if(rayHit.collider.GetComponent<EnemyMission4>())
-                {
-                    rayHit.collider.GetComponent<EnemyMission4>().TakeDamage(damage);
-                }
-                
+                Debug.Log(rayHit.collider.name);
+                rayHit.collider.GetComponentInParent<ModifiedPlayerMovement>().TakeDamage(damage);
             }
         }
 
@@ -101,9 +103,8 @@ public class GunScript : MonoBehaviour
         //Graphics
         Instantiate(bulletHole, rayHit.point, Quaternion.Euler(0, 180, 0));
         //Instantiate(muzzleFlash, attackPoint.position, Quaternion.Euler(0, 180, 0));
-        
+
         bulletsShot--;
-        BulletsText.text = bulletsLeft + "/" + magazineSize;
 
         if (bulletsShot > 0 && bulletsLeft > 0)
             Invoke("Shoot", timeBtwnShots);
@@ -129,7 +130,6 @@ public class GunScript : MonoBehaviour
     {
         reloading = true;
         bulletsLeft = magazineSize;
-        BulletsText.text = bulletsLeft + "/" + magazineSize;
         reloading = false;
 
     }

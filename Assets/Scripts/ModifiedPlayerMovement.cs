@@ -151,6 +151,7 @@ public class ModifiedPlayerMovement : MonoBehaviour
 
 
         }
+        
     }
 
     private void MovePlayer()

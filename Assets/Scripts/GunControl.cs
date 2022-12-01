@@ -18,7 +18,7 @@ public class GunControl : MonoBehaviour
     private void Start()
     {
         
-        gameManager.GetComponent<GameManagerMission2>().UpdateHelpMsgText("Press G toggle you're gun!");
+        //gameManager.GetComponent<GameManagerMission2>().UpdateHelpMsgText("Press G toggle you're gun!");
     }
 
     // Update is called once per frame
