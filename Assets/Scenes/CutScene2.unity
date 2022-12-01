@@ -335,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ddb004a9854d3458f88b2b8255b8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  video: {fileID: 1765398857}
 --- !u!4 &1357621087
 Transform:
   m_ObjectHideFlags: 0

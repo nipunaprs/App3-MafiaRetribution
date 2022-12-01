@@ -6,6 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Scene1.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/CutScene1.unity
+    guid: 30dd95830cddaa94c8578b5daf97f317
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: fe50f43566c4081478971ba7e40dc474
+  - enabled: 1
+    path: Assets/Scenes/LoadSaveMenu.unity
+    guid: 8bbe26c7ddf76f341a4a2a2f93eafaea
+  - enabled: 1
+    path: Assets/Scenes/CutScene2.unity
+    guid: 2214ac4d14bd9b84ab0d9eb40ca5e510
+  - enabled: 1
+    path: Assets/Scenes/Mission1.unity
+    guid: ce760d57716e6fb4c9e25b28b5c6865a
+  - enabled: 1
+    path: Assets/Scenes/CutScene3.unity
+    guid: 5fb1e843cd30fda4c89071cccce9f89b
+  - enabled: 1
+    path: Assets/Scenes/Mission2.unity
+    guid: a9c5c6d03e644964caee6c19421d5a18
+  - enabled: 1
+    path: Assets/Scenes/CutScene4.unity
+    guid: ab1d5f1f698c9ca4a9384d3867dfc4bf
+  - enabled: 1
+    path: Assets/Scenes/Mission3.unity
+    guid: 67761d82ce6d6444fb374eff360352ce
+  - enabled: 1
+    path: Assets/Scenes/CutScene5.unity
+    guid: cb86e35830d5683488c4dfc96e1dbfbd
+  - enabled: 1
+    path: Assets/Scenes/Mission4.unity
+    guid: bfcb402bbaf7a6543bad7a4eb562ce01
   m_configObjects: {}
